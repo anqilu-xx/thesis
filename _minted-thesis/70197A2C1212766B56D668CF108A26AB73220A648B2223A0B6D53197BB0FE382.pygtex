@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZsh{} Inside process method of dispel4py.processor.GenericWrapper}
+\PYG{c}{\PYGZsh{} Use Set to store data types to avoid duplicate values}
+\PYG{n}{in\PYGZus{}data\PYGZus{}types} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{()}
+\PYG{n}{out\PYGZus{}data\PYGZus{}types} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{()}
+\PYG{c}{\PYGZsh{} Continuously reading and writing data}
+\PYG{k}{while} \PYG{n}{status} \PYG{o}{!=} \PYG{n}{STATUS\PYGZus{}TERMINATED}\PYG{p}{:}
+    \PYG{c}{\PYGZsh{} Check inputs validity}
+    \PYG{k}{if} \PYG{n}{inputs} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n+nb+bp}{None} \PYG{o+ow}{and} \PYG{n}{inputs}\PYG{p}{:}
+            \PYG{c}{\PYGZsh{} Get data type of input value}
+            \PYG{n}{in\PYGZus{}type} \PYG{o}{=} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{inputs}\PYG{o}{.}\PYG{n}{itervalues}\PYG{p}{()}\PYG{o}{.}\PYG{n}{next}\PYG{p}{())}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}}
+            \PYG{c}{\PYGZsh{} Collect input data type to set}
+            \PYG{n}{in\PYGZus{}data\PYGZus{}types}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{in\PYGZus{}type}\PYG{p}{)}
+            \PYG{c}{\PYGZsh{} Generate output through customized PE description}
+            \PYG{n}{outputs} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{pe}\PYG{o}{.}\PYG{n}{process}\PYG{p}{(}\PYG{n}{inputs}\PYG{p}{)}
+            \PYG{c}{\PYGZsh{} Check whether output value is empty}
+            \PYG{k}{if} \PYG{n}{outputs}\PYG{p}{:}
+                \PYG{c}{\PYGZsh{} Get data type of output value}
+                \PYG{n}{out\PYGZus{}type} \PYG{o}{=} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{outputs}\PYG{o}{.}\PYG{n}{itervalues}\PYG{p}{()}\PYG{o}{.}\PYG{n}{next}\PYG{p}{())}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}}
+                \PYG{c}{\PYGZsh{} Collect output data type to set}
+                \PYG{n}{out\PYGZus{}data\PYGZus{}types}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{out\PYGZus{}type}\PYG{p}{)}
+\PYG{c}{\PYGZsh{} Return a string format value which contains all data types gets/ delivers}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}data\PYGZus{}type} \PYG{o}{=} \PYG{l+s}{\PYGZdq{},\PYGZdq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{in\PYGZus{}data\PYGZus{}types}\PYG{p}{)}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{out\PYGZus{}data\PYGZus{}type} \PYG{o}{=} \PYG{l+s}{\PYGZdq{},\PYGZdq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{out\PYGZus{}data\PYGZus{}types}\PYG{p}{)}
+\end{Verbatim}

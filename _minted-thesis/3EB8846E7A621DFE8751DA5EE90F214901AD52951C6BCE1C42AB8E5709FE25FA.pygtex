@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+dispel4py \PYG{o}{[}\PYGZhy{}h\PYG{o}{]} \PYG{o}{[}\PYGZhy{}a attribute\PYG{o}{]} \PYG{o}{[}\PYGZhy{}f inputfile\PYG{o}{]} \PYG{o}{[}\PYGZhy{}d inputdata\PYG{o}{]} \PYG{o}{[}\PYGZhy{}i iterations\PYG{o}{]} \PYG{o}{[}\PYGZhy{}p\PYG{o}{]} target module
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{SELECT} \PYG{o}{*} \PYG{k}{FROM} \PYG{n}{WorkflowProfiles} \PYG{k}{WHERE} \PYG{n}{WorkflowProfiles}\PYG{p}{.}\PYG{n}{WF\PYGZus{}SubmissionID} \PYG{o}{=} \PYG{n}{x}\PYG{l+s+s1}{\PYGZsq{}f0e44f87460c11e5a155a0999b075e3f\PYGZsq{}}\PYG{p}{;}
+\PYG{k}{SELECT} \PYG{o}{*} \PYG{k}{FROM} \PYG{n}{PEProfiles} \PYG{k}{WHERE} \PYG{n}{PEProfiles}\PYG{p}{.}\PYG{n}{PE\PYGZus{}SubmissionID} \PYG{o}{=} \PYG{n}{x}\PYG{l+s+s1}{\PYGZsq{}f0e44f87460c11e5a155a0999b075e3f\PYGZsq{}}\PYG{p}{;}
+\PYG{k}{SELECT} \PYG{o}{*} \PYG{k}{FROM} \PYG{n}{PEInstanceProfiles} \PYG{k}{WHERE} \PYG{n}{PEInstanceProfiles}\PYG{p}{.}\PYG{n}{PEI\PYGZus{}SubmissionID} \PYG{o}{=} \PYG{n}{x}\PYG{l+s+s1}{\PYGZsq{}f0e44f87460c11e5a155a0999b075e3f\PYGZsq{}}\PYG{p}{;}
+\end{Verbatim}

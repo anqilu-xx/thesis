@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@wrap\PYGZus{}exceptions}
+\PYG{k}{def} \PYG{n+nf}{memory\PYGZus{}info}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+    \PYG{n}{rss}\PYG{p}{,} \PYG{n}{vms} \PYG{o}{=} \PYG{n}{cext}\PYG{o}{.}\PYG{n}{proc\PYGZus{}memory\PYGZus{}info}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{pid}\PYG{p}{)[:}\PYG{l+m+mi}{2}\PYG{p}{]}
+    \PYG{k}{return} \PYG{n}{\PYGZus{}common}\PYG{o}{.}\PYG{n}{pmem}\PYG{p}{(}\PYG{n}{rss}\PYG{p}{,} \PYG{n}{vms}\PYG{p}{)}
+\end{Verbatim}

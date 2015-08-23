@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+MEM  32.218750  2015\PYGZhy{}08\PYGZhy{}21 00:02:44 read    InternalExtinction3 0
+MEM  32.218750  2015\PYGZhy{}08\PYGZhy{}21 00:02:44 read    FilterColumns2      3
+MEM  32.218750  2015\PYGZhy{}08\PYGZhy{}21 00:02:44 read    GetVOTable1         2
+MEM  32.218750  2015\PYGZhy{}08\PYGZhy{}21 00:02:44 read    read0               1
+MEM  32.367188  2015\PYGZhy{}08\PYGZhy{}21 00:02:44 write   read0               1
+MEM  32.550781  2015\PYGZhy{}08\PYGZhy{}21 00:02:44 write   read0               1
+MEM  32.550781  2015\PYGZhy{}08\PYGZhy{}21 00:02:44 write   read0               1
+MEM  32.550781  2015\PYGZhy{}08\PYGZhy{}21 00:02:44 write   read0               1
+MEM  32.550781  2015\PYGZhy{}08\PYGZhy{}21 00:02:44 write   read0               1
+MEM  32.550781  2015\PYGZhy{}08\PYGZhy{}21 00:02:44 write   read0               1
+\end{Verbatim}

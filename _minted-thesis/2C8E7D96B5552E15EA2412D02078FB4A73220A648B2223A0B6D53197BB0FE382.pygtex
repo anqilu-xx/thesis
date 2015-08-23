@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{calls\PYGZus{}count}\PYG{p}{(}\PYG{n}{f}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf}{wrapped}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kwargs}\PYG{p}{):}
+
+        \PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{args}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n+nb}{object}\PYG{p}{):}
+            \PYG{k}{if} \PYG{n+nb}{hasattr}\PYG{p}{(}\PYG{n}{args}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{l+s}{\PYGZdq{}\PYGZus{}read\PYGZus{}calls\PYGZdq{}}\PYG{p}{)} \PYG{o+ow}{and} \PYG{n}{f}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}\PYGZus{}read\PYGZdq{}}\PYG{p}{:}
+                \PYG{n+nb}{setattr}\PYG{p}{(}\PYG{n}{args}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{l+s}{\PYGZdq{}\PYGZus{}read\PYGZus{}calls\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n}{args}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{l+s}{\PYGZdq{}\PYGZus{}read\PYGZus{}calls\PYGZdq{}}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+            \PYG{k}{if} \PYG{n+nb}{hasattr}\PYG{p}{(}\PYG{n}{args}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{l+s}{\PYGZdq{}\PYGZus{}write\PYGZus{}calls\PYGZdq{}}\PYG{p}{)} \PYG{o+ow}{and} \PYG{n}{f}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}\PYGZus{}write\PYGZdq{}}\PYG{p}{:}
+                \PYG{n+nb}{setattr}\PYG{p}{(}\PYG{n}{args}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{l+s}{\PYGZdq{}\PYGZus{}write\PYGZus{}calls\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n}{args}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{l+s}{\PYGZdq{}\PYGZus{}write\PYGZus{}calls\PYGZdq{}}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+
+        \PYG{k}{return} \PYG{n}{f}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kwargs}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{wrapped}
+\end{Verbatim}

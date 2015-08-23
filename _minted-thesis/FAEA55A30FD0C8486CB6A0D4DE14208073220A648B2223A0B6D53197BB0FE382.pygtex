@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZsh{} Inside process method of}
+\PYG{c}{\PYGZsh{} dispel4py.processor.GenericWrapper}
+\PYG{c}{\PYGZsh{} Initialize total input data size}
+\PYG{n}{total\PYGZus{}in\PYGZus{}size} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{c}{\PYGZsh{} Initialize total output data size}
+\PYG{n}{total\PYGZus{}out\PYGZus{}size} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{c}{\PYGZsh{} Continuously read and write data}
+\PYG{k}{while} \PYG{n}{status} \PYG{o}{!=} \PYG{n}{STATUS\PYGZus{}TERMINATED}\PYG{p}{:}
+    \PYG{c}{\PYGZsh{} Check inputs validity}
+    \PYG{k}{if} \PYG{n}{inputs} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n+nb+bp}{None} \PYG{o+ow}{and} \PYG{n}{inputs}\PYG{p}{:}
+            \PYG{c}{\PYGZsh{} Accumulate input data size}
+            \PYG{n}{total\PYGZus{}in\PYGZus{}size} \PYG{o}{+=} \PYG{n}{sys}\PYG{o}{.}\PYG{n}{getsizeof}\PYG{p}{(}\PYG{n}{inputs}\PYG{p}{)}
+        \PYG{c}{\PYGZsh{} Generate output through customized PE description}
+        \PYG{n}{outputs} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{pe}\PYG{o}{.}\PYG{n}{process}\PYG{p}{(}\PYG{n}{inputs}\PYG{p}{)}
+        \PYG{c}{\PYGZsh{} Check whether output value is epmty}
+        \PYG{k}{if} \PYG{n}{outputs}\PYG{p}{:}
+            \PYG{c}{\PYGZsh{} Accumulate output data size}
+            \PYG{n}{total\PYGZus{}out\PYGZus{}size} \PYG{o}{+=} \PYG{n}{sys}\PYG{o}{.}\PYG{n}{getsizeof}\PYG{p}{(}\PYG{n}{outputs}\PYG{p}{)}
+\PYG{c}{\PYGZsh{} Transfer the references of I/O data size back to monitor}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{in\PYGZus{}data\PYGZus{}size} \PYG{o}{=} \PYG{n}{total\PYGZus{}in\PYGZus{}size}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{out\PYGZus{}data\PYGZus{}size} \PYG{o}{=} \PYG{n}{total\PYGZus{}out\PYGZus{}size}
+\end{Verbatim}

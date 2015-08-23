@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+90df2138478f11e58583e41f13f00272
+Processes: \PYGZob{}\PYGZsq{}read0\PYGZsq{}: [1], \PYGZsq{}FilterColumns2\PYGZsq{}: [3], \PYGZsq{}InternalExtinction3\PYGZsq{}: [0], \PYGZsq{}GetVOTable1\PYGZsq{}: [2]\PYGZcb{}
+GetVOTable1 (rank 2): reading VOTable RA=0.77345, DEC=\PYGZhy{}1.9143
+GetVOTable1 (rank 2): reading VOTable RA=0.83487, DEC=29.7972
+GetVOTable1 (rank 2): reading VOTable RA=0.84108, DEC=30.7821
+FilterColumns2 (rank 3): extracted column: MType = SBbc
+FilterColumns2 (rank 3): extracted column: logR25 = 0.35
+InternalExtinction3 (rank 0): internal extinction: [1, \PYGZsq{}0.77345\PYGZsq{}, \PYGZsq{}\PYGZhy{}1.9143\PYGZsq{}, \PYGZsq{}SBbc\PYGZsq{}, 0.34999999, 4.0, 0.5533987734977625]
+InternalExtinction3 (rank 0): internal extinction: [1, \PYGZsq{}0.77345\PYGZsq{}, \PYGZsq{}\PYGZhy{}1.9143\PYGZsq{}, \PYGZsq{}SBbc\PYGZsq{}, 0.34999999, 4.0, 0.5533987734977625]
+GetVOTable1 (rank 2): reading VOTable RA=0.99487, DEC=20.7524
+\end{Verbatim}

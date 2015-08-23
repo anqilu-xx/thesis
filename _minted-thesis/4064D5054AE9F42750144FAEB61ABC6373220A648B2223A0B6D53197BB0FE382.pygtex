@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{subprocess}
+
+\PYG{c}{\PYGZsh{} run command \PYGZdq{}ps v \PYGZhy{}p pid\PYGZdq{} and get returned value}
+\PYG{n}{out} \PYG{o}{=} \PYG{n}{subprocess}\PYG{o}{.}\PYG{n}{Popen}\PYG{p}{([}\PYG{l+s}{\PYGZsq{}ps\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}v\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}\PYGZhy{}p\PYGZsq{}}\PYG{p}{,} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{pid}\PYG{p}{)],} \PYG{n}{stdout}\PYG{o}{=}\PYG{n}{subprocess}\PYG{o}{.}\PYG{n}{PIPE}\PYG{p}{)}\PYG{o}{.}\PYG{n}{communicate}\PYG{p}{()[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{} retrieve column index of RSS}
+\PYG{n}{vsz\PYGZus{}index} \PYG{o}{=} \PYG{n}{out}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{.}\PYG{n}{split}\PYG{p}{()}\PYG{o}{.}\PYG{n}{index}\PYG{p}{(}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}RSS\PYGZsq{}}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{} retrieve RSS value in MiB}
+\PYG{n}{mem} \PYG{o}{=} \PYG{n+nb}{float}\PYG{p}{(}\PYG{n}{out}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{.}\PYG{n}{split}\PYG{p}{()[}\PYG{n}{vsz\PYGZus{}index}\PYG{p}{])} \PYG{o}{/} \PYG{l+m+mi}{1024}
+\end{Verbatim}

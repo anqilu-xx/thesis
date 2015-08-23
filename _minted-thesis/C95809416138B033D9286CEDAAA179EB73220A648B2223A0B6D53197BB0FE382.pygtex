@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZsh{} Inside process method of dispel4py.processor.GenericWrapper}
+
+\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{read\PYGZus{}time} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{:}
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{read\PYGZus{}rate} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}read\PYGZus{}calls} \PYG{o}{/} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{read\PYGZus{}time}
+\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{write\PYGZus{}time} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{:}
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{write\PYGZus{}rate} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}write\PYGZus{}calls} \PYG{o}{/} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{write\PYGZus{}time}
+\end{Verbatim}

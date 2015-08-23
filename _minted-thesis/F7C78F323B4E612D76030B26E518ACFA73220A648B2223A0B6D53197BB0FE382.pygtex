@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@calls\PYGZus{}count}
+\PYG{k}{def} \PYG{n+nf}{\PYGZus{}read}\PYG{p}{():}
+    \PYG{o}{...}
+
+\PYG{n+nd}{@calls\PYGZus{}count}
+\PYG{k}{def} \PYG{n+nf}{\PYGZus{}write}\PYG{p}{():}
+    \PYG{o}{...}
+\end{Verbatim}

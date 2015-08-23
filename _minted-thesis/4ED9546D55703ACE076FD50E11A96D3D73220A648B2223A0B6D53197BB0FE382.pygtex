@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{psutil}
+
+\PYG{c}{\PYGZsh{} Instantiate psutil.Process}
+\PYG{n}{process} \PYG{o}{=} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{Process}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{())}
+
+\PYG{c}{\PYGZsh{} Retrieve RSS, which stored as the first element in tuple returned}
+\PYG{n}{memory} \PYG{o}{=} \PYG{n}{process}\PYG{o}{.}\PYG{n}{memory\PYGZus{}info}\PYG{p}{()[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{/} \PYG{n+nb}{float}\PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{**} \PYG{l+m+mi}{20}\PYG{p}{)}
+\end{Verbatim}

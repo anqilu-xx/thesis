@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+15278efe46ae11e5af97e41f13efbb4a
+Partitions: [read0], [GetVOTable1, FilterColumns2, InternalExtinction3]
+SimpleProcessingPE5 contains [\PYGZsq{}FilterColumns2\PYGZsq{}, \PYGZsq{}GetVOTable1\PYGZsq{}, \PYGZsq{}InternalExtinction3\PYGZsq{}]
+SimpleProcessingPE4 contains [\PYGZsq{}read0\PYGZsq{}]
+Processes: \PYGZob{}\PYGZsq{}SimpleProcessingPE5\PYGZsq{}: [0, 1, 2], \PYGZsq{}SimpleProcessingPE4\PYGZsq{}: [3]\PYGZcb{}
+read0 (rank 3): Reading file Astro/coordinates.txt
+SimpleProcessingPE4 (rank 3): Processed 1 iteration.
+GetVOTable1 (rank 0): reading VOTable RA=0.77345, DEC=\PYGZhy{}1.9143
+FilterColumns2 (rank 0): extracted column: MType = SBbc
+FilterColumns2 (rank 0): extracted column: logR25 = 0.35
+\end{Verbatim}

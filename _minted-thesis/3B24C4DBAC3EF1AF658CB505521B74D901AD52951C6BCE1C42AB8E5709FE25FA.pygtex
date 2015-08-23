@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZsh{} Assuming getting memory info for processor with pid 7464}
+ps v \PYGZhy{}p 7464
+\end{Verbatim}

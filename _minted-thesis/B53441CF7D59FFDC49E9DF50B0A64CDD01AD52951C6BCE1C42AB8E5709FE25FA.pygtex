@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZsh{}!/bin/sh}
+\PYG{c}{\PYGZsh{}\PYGZdl{} \PYGZhy{}N astro}
+\PYG{c}{\PYGZsh{}\PYGZdl{} \PYGZhy{}cwd}
+\PYG{c}{\PYGZsh{}\PYGZdl{} \PYGZhy{}pe OpenMP 4}
+\PYG{c}{\PYGZsh{}\PYGZdl{} \PYGZhy{}l h\PYGZus{}rt=00:30:00}
+
+. /etc/profile.d/modules.sh
+module load anaconda/2.1.0
+
+python \PYGZhy{}m dispel4py.new.processor multi Astro/int\PYGZus{}ext\PYGZus{}graph.py \PYGZhy{}d \PYG{l+s+s1}{\PYGZsq{}\PYGZob{}\PYGZdq{}read\PYGZdq{} : [ \PYGZob{}\PYGZdq{}input\PYGZdq{} : \PYGZdq{}Astro/coordinates.txt\PYGZdq{}\PYGZcb{} ]\PYGZcb{}\PYGZsq{}} \PYGZhy{}n \PYG{l+m}{4} \PYGZhy{}p
+\end{Verbatim}
